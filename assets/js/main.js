@@ -316,4 +316,57 @@
     }, 200);
   }
 
+///Tracking
+// Assuming you have a function to fetch GPS data (fetchGPSData)
+function fetchGPSData() {
+    // Logic to fetch GPS data from the specified source
+    // ...
+    return {
+        latitude: latitude,
+        longitude: longitude,
+        speed: speed,
+        // Other relevant data
+    };
+}
+
+function initializeMap() {
+    const map = new google.maps.Map(document.getElementById('map'), {
+        // Map options like zoom, center, etc.
+    });
+
+    // Create a marker to represent the truck
+    const marker = new google.maps.Marker({
+        map: map,
+        position: { lat: initialLatitude, lng: initialLongitude }, // Initial position
+    });
+
+    // Function to update the marker's position based on new GPS data
+    function updateMarker(newPosition) {
+        marker.setPosition(newPosition);
+        map.setCenter(newPosition);
+    }
+
+    // Fetch GPS data periodically and update the map
+    setInterval(() => {
+        const gpsData = fetchGPSData();
+        updateMarker(gpsData);
+        updateTrackingInfo(gpsData); // Function to update tracking information
+    }, updateInterval); // Update interval in milliseconds
+}
+
+// Function to update tracking information
+function updateTrackingInfo(gpsData) {
+    const trackingInfo = document.getElementById('tracking-info');
+    trackingInfo.innerHTML = `
+        Speed: ${gpsData.speed} km/h<br>
+        Location: ${gpsData.latitude}, ${gpsData.longitude}<br>
+        // Other information
+    `;
+}
+
+initializeMap();
+
+
+
+  
 })();
