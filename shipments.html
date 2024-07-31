@@ -290,147 +290,280 @@
 
   </aside><!-- End Sidebar-->
 
-
   <main id="main" class="main">
     <div class="pagetitle">
-      <h1>TruckBack Shipments</h1>
-      <nav>
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item active">Shipments</li>
-        </ol>
-      </nav>
-    </div><!-- End Page Title -->
-  
+        <h1>TruckBack Shipments</h1>
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active">Shipments</li>
+            </ol>
+        </nav>
+    </div>
+    <!-- End Page Title -->
+
     <section class="section dashboard">
-      <div class="row">
-  
-        <!-- Shipments Overview -->
-        <div class="col-lg-12">
-          <div class="row">
-            
-            <!-- Pending Shipments Card -->
-            <div class="col-md-3">
-              <a href="#" class="card shipment-card">
-                <div class="card-body">
-                  <div class="d-flex align-items-center">
-                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center bg-primary">
-                      <i class="bi bi-clock fs-3"></i>
+        <div class="row">
+            <!-- Shipments Overview -->
+            <div class="col-lg-12">
+                <div class="row">
+                    <!-- Pending Shipments Card -->
+                    <div class="col-md-3">
+                        <a href="#" class="card shipment-card">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center bg-primary">
+                                        <i class="bi bi-clock fs-3"></i>
+                                    </div>
+                                    <div class="ps-3">
+                                        <h6>Pending Shipments</h6>
+                                        <span class="text-muted">View all pending shipments</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                    <div class="ps-3">
-                      <h6>Pending Shipments</h6>
-                      <span class="text-muted">View all pending shipments</span>
+                    <!-- End Pending Shipments Card -->
+
+                    <!-- Approved Shipments Card -->
+                    <div class="col-md-3">
+                        <a href="#" class="card shipment-card">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center bg-success">
+                                        <i class="bi bi-check-circle fs-3"></i>
+                                    </div>
+                                    <div class="ps-3">
+                                        <h6>Approved Shipments</h6>
+                                        <span class="text-muted">View all approved shipments</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                  </div>
+                    <!-- End Approved Shipments Card -->
+
+                    <!-- Processing Shipments Card -->
+                    <div class="col-md-3">
+                        <a href="#" class="card shipment-card">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center bg-warning">
+                                        <i class="bi bi-arrow-repeat fs-3"></i>
+                                    </div>
+                                    <div class="ps-3">
+                                        <h6>Processing Shipments</h6>
+                                        <span class="text-muted">View all processing shipments</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- End Processing Shipments Card -->
+
+                    <!-- Completed Shipments Card -->
+                    <div class="col-md-3">
+                        <a href="#" class="card shipment-card">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center bg-info">
+                                        <i class="bi bi-check2-all fs-3"></i>
+                                    </div>
+                                    <div class="ps-3">
+                                        <h6>Completed Shipments</h6>
+                                        <span class="text-muted">View all completed shipments</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- End Completed Shipments Card -->
+
+                    <!-- Request New Shipment Button -->
+                    <div class="col-md-12 mt-4">
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#requestShipmentModal">
+                            <i class="bi bi-plus-circle"></i> Request New Shipment
+                        </button>
+                    </div>
+                    <!-- End Request New Shipment Button -->
+
                 </div>
-              </a>
-            </div><!-- End Pending Shipments Card -->
-  
-            <!-- Approved Shipments Card -->
-            <div class="col-md-3">
-              <a href="#" class="card shipment-card">
-                <div class="card-body">
-                  <div class="d-flex align-items-center">
-                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center bg-success">
-                      <i class="bi bi-check-circle fs-3"></i>
-                    </div>
-                    <div class="ps-3">
-                      <h6>Approved Shipments</h6>
-                      <span class="text-muted">View all approved shipments</span>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div><!-- End Approved Shipments Card -->
-  
-            <!-- Processing Shipments Card -->
-            <div class="col-md-3">
-              <a href="#" class="card shipment-card">
-                <div class="card-body">
-                  <div class="d-flex align-items-center">
-                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center bg-warning">
-                      <i class="bi bi-arrow-repeat fs-3"></i>
-                    </div>
-                    <div class="ps-3">
-                      <h6>Processing Shipments</h6>
-                      <span class="text-muted">View all processing shipments</span>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div><!-- End Processing Shipments Card -->
-  
-            <!-- Completed Shipments Card -->
-            <div class="col-md-3">
-              <a href="#" class="card shipment-card">
-                <div class="card-body">
-                  <div class="d-flex align-items-center">
-                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center bg-info">
-                      <i class="bi bi-check2-all fs-3"></i>
-                    </div>
-                    <div class="ps-3">
-                      <h6>Completed Shipments</h6>
-                      <span class="text-muted">View all completed shipments</span>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div><!-- End Completed Shipments Card -->
-  
-            <!-- Request New Shipment Card -->
-            <div class="col-md-12 mt-4">
-              <a href="#" class="btn btn-primary">
-                <i class="bi bi-plus-circle"></i> Request New Shipment
-              </a>
-            </div><!-- End Request New Shipment Card -->
-  
-          </div>
-        </div><!-- End Shipments Overview -->
-  
-        <!-- Shipments Table -->
-        <div class="col-lg-12 mt-4">
-          <div class="card shipment-table">
-            <div class="card-body">
-              <h5 class="card-title">All Shipments</h5>
-              <input type="text" id="search-input" class="form-control mb-3" placeholder="Search keyword...">
-  
-              <table class="table table-bordered">
-                <thead>
-                  <tr>
-                    <th scope="col">S/N</th>
-                    <th scope="col">ITEM ID</th>
-                    <th scope="col">PICK UP</th>
-                    <th scope="col">DESTINATION ADDRESS</th>
-                    <th scope="col">WEIGHT</th>
-                    <th scope="col">DATE</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>ITEM-001</td>
-                    <td>Gombe</td>
-                    <td>Lagos</td>
-                    <td>1000kg</td>
-                    <td>2024-07-29</td>
-                  </tr>
-                  <!-- More rows as needed -->
-                </tbody>
-              </table>
-              <div class="pagination">
-                <a href="#" class="page-link">&laquo; Previous</a>
-                <a href="#" class="page-link">Next &raquo;</a>
-              </div>
-              <div class="no-results text-center mt-3">
-                <p>No shipments found!</p>
-              </div>
             </div>
-          </div>
-        </div><!-- End Shipments Table -->
-  
-      </div>
+            <!-- End Shipments Overview -->
+
+            <!-- Shipments Table -->
+            <div class="col-lg-12 mt-4">
+                <div class="card shipment-table">
+                    <div class="card-body">
+                        <h5 class="card-title">All Shipments</h5>
+                        <input type="text" id="search-input" class="form-control mb-3" placeholder="Search keyword...">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col">S/N</th>
+                                    <th scope="col">ITEM ID</th>
+                                    <th scope="col">PICK UP</th>
+                                    <th scope="col">DESTINATION ADDRESS</th>
+                                    <th scope="col">WEIGHT</th>
+                                    <th scope="col">DATE</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>ITEM-001</td>
+                                    <td>Gombe</td>
+                                    <td>Lagos</td>
+                                    <td>1000kg</td>
+                                    <td>2024-07-29</td>
+                                </tr>
+                                <!-- More rows as needed -->
+                            </tbody>
+                        </table>
+                        <div class="pagination">
+                            <a href="#" class="page-link">&laquo; Previous</a>
+                            <a href="#" class="page-link">Next &raquo;</a>
+                        </div>
+                        <div class="no-results text-center mt-3">
+                            <p>No shipments found!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Shipments Table -->
+
+        </div>
     </section>
-  </main><!-- End #main -->
+</main>
+<!-- End #main -->
+
+<!-- Request Shipment Modal -->
+<div class="modal fade" id="requestShipmentModal" tabindex="-1" aria-labelledby="requestShipmentModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="requestShipmentModalLabel">Request Shipment</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="form-section">
+                    <h3>Request Shipment</h3>
+                    <p>Kindly fill in the required details to request a shipment.</p>
+                    <form>
+                        <div class="mb-3">
+                            <label for="packageWeight" class="form-label">Package Weight (Tons)</label>
+                            <input type="number" class="form-control" id="packageWeight" placeholder="Enter weight in tons">
+                        </div>
+                        <div class="mb-3">
+                            <label for="pickupAddress" class="form-label">Pickup Address</label>
+                            <select class="form-control" id="pickupAddress">
+                                <option value="">Select Pickup Address</option>
+                                <!-- List of Nigerian states -->
+                                <option value="Abia">Abia</option>
+                                <option value="Adamawa">Adamawa</option>
+                                <option value="Akwa Ibom">Akwa Ibom</option>
+                                <option value="Anambra">Anambra</option>
+                                <option value="Bauchi">Bauchi</option>
+                                <option value="Bayelsa">Bayelsa</option>
+                                <option value="Benue">Benue</option>
+                                <option value="Borno">Borno</option>
+                                <option value="Cross River">Cross River</option>
+                                <option value="Delta">Delta</option>
+                                <option value="Ebonyi">Ebonyi</option>
+                                <option value="Edo">Edo</option>
+                                <option value="Ekiti">Ekiti</option>
+                                <option value="Enugu">Enugu</option>
+                                <option value="FCT">FCT</option>
+                                <option value="Gombe">Gombe</option>
+                                <option value="Imo">Imo</option>
+                                <option value="Jigawa">Jigawa</option>
+                                <option value="Kaduna">Kaduna</option>
+                                <option value="Kano">Kano</option>
+                                <option value="Katsina">Katsina</option>
+                                <option value="Kebbi">Kebbi</option>
+                                <option value="Kogi">Kogi</option>
+                                <option value="Kwara">Kwara</option>
+                                <option value="Lagos">Lagos</option>
+                                <option value="Nasarawa">Nasarawa</option>
+                                <option value="Niger">Niger</option>
+                                <option value="Ogun">Ogun</option>
+                                <option value="Ondo">Ondo</option>
+                                <option value="Osun">Osun</option>
+                                <option value="Oyo">Oyo</option>
+                                <option value="Plateau">Plateau</option>
+                                <option value="Rivers">Rivers</option>
+                                <option value="Sokoto">Sokoto</option>
+                                <option value="Taraba">Taraba</option>
+                                <option value="Yobe">Yobe</option>
+                                <option value="Zamfara">Zamfara</option>
+                            </select>
+                            <div class="invalid-feedback">Please select a valid pick up address!</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="destinationAddress" class="form-label">Destination Address</label>
+                            <select class="form-control" id="destinationAddress">
+                                <option value="">Select Destination Address</option>
+                                <!-- List of Nigerian states -->
+                                <option value="Abia">Abia</option>
+                                <option value="Adamawa">Adamawa</option>
+                                <option value="Akwa Ibom">Akwa Ibom</option>
+                                <option value="Anambra">Anambra</option>
+                                <option value="Bauchi">Bauchi</option>
+                                <option value="Bayelsa">Bayelsa</option>
+                                <option value="Benue">Benue</option>
+                                <option value="Borno">Borno</option>
+                                <option value="Cross River">Cross River</option>
+                                <option value="Delta">Delta</option>
+                                <option value="Ebonyi">Ebonyi</option>
+                                <option value="Edo">Edo</option>
+                                <option value="Ekiti">Ekiti</option>
+                                <option value="Enugu">Enugu</option>
+                                <option value="FCT">FCT</option>
+                                <option value="Gombe">Gombe</option>
+                                <option value="Imo">Imo</option>
+                                <option value="Jigawa">Jigawa</option>
+                                <option value="Kaduna">Kaduna</option>
+                                <option value="Kano">Kano</option>
+                                <option value="Katsina">Katsina</option>
+                                <option value="Kebbi">Kebbi</option>
+                                <option value="Kogi">Kogi</option>
+                                <option value="Kwara">Kwara</option>
+                                <option value="Lagos">Lagos</option>
+                                <option value="Nasarawa">Nasarawa</option>
+                                <option value="Niger">Niger</option>
+                                <option value="Ogun">Ogun</option>
+                                <option value="Ondo">Ondo</option>
+                                <option value="Osun">Osun</option>
+                                <option value="Oyo">Oyo</option>
+                                <option value="Plateau">Plateau</option>
+                                <option value="Rivers">Rivers</option>
+                                <option value="Sokoto">Sokoto</option>
+                                <option value="Taraba">Taraba</option>
+                                <option value="Yobe">Yobe</option>
+                                <option value="Zamfara">Zamfara</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit Request</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Request Shipment Modal -->
+  
+  <script>
+    // JavaScript to handle form submission and address selection
+  
+    document.getElementById('request-shipment-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      // Handle form submission logic here
+      alert('Shipment request submitted!');
+    });
+  
+    // Optionally, implement a map search and address suggestion feature
+  </script>
+  
   
  
 
@@ -440,7 +573,7 @@
       &copy; Copyright <strong><span>TruckBack</span></strong>. All Rights Reserved
     </div>
     <div class="credits">
-      Designed by <a href="https://your-website.com/">Muhammad Tukur</a>
+      Designed by <a href="https://facebook.com/officialmmtukur">Muhammad Tukur</a>
     </div>
   </footer><!-- End Footer -->
 
